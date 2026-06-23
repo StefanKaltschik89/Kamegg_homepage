@@ -25,4 +25,10 @@ npm run preview
 
 ## Hinweis zu GitHub Hosting
 
-Für GitHub Pages kann das Projekt direkt aus `dist/` veröffentlicht werden. Wenn du später eine echte Node.js-API willst, sollte sie separat gehostet werden, weil GitHub Pages nur statische Dateien ausliefert.
+Das Projekt wird automatisch über GitHub Actions auf GitHub Pages veröffentlicht.
+
+Live unter:
+
+https://stefankaltschik89.github.io/Kamegg_homepage/
+
+Wenn du später eine echte Node.js-API willst, sollte sie separat gehostet werden, weil GitHub Pages nur statische Dateien ausliefert.
