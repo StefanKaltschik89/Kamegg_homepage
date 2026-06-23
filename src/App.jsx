@@ -70,19 +70,33 @@ function App() {
   return (
     <main className="page-shell">
       <section className="hero">
-        <p className="eyebrow">Kamegg entdecken</p>
-        <h1>Eine Homepage für Ort und Veranstaltungskalender.</h1>
-        <p className="hero-copy">
-          Diese Seite stellt Kamegg in den Mittelpunkt und bündelt die wichtigsten
-          Termine in einer ruhigen, übersichtlichen Darstellung.
-        </p>
-        <div className="hero-actions">
-          <a className="primary-action" href="#kalender">
-            Kalender ansehen
-          </a>
-          <a className="secondary-action" href="#kamegg">
-            Kamegg entdecken
-          </a>
+        <div className="hero-layout">
+          <div className="hero-content">
+            <p className="eyebrow">Kamegg entdecken</p>
+            <h1>Eine Homepage für Ort und Veranstaltungskalender.</h1>
+            <p className="hero-copy">
+              Diese Seite stellt Kamegg in den Mittelpunkt und bündelt die wichtigsten
+              Termine in einer ruhigen, übersichtlichen Darstellung.
+            </p>
+            <div className="hero-actions">
+              <a className="primary-action" href="#kalender">
+                Kalender ansehen
+              </a>
+              <a className="secondary-action" href="#kamegg">
+                Kamegg entdecken
+              </a>
+            </div>
+          </div>
+
+          <figure className="hero-media">
+            <img
+              src="/media/kamegg-drone-placeholder.jpg"
+              alt="Drohnenaufnahme von Kamegg"
+              onError={(event) => {
+                event.currentTarget.src = '/media/kamegg-drone-placeholder.svg'
+              }}
+            />
+          </figure>
         </div>
       </section>
 
