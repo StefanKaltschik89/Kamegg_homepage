@@ -55,6 +55,8 @@ const events = [
 ]
 
 const eventDays = new Map(events.map((event) => [event.day, event]))
+const heroImageSrc = `${import.meta.env.BASE_URL}media/kamegg-drone-placeholder.jpg`
+const heroImageFallbackSrc = `${import.meta.env.BASE_URL}media/kamegg-drone-placeholder.svg`
 
 const calendarCells = Array.from({ length: leadingDays + daysInMonth }, (_, index) => {
   const day = index - leadingDays + 1
@@ -90,10 +92,10 @@ function App() {
 
           <figure className="hero-media">
             <img
-              src="/media/kamegg-drone-placeholder.jpg"
+              src={heroImageSrc}
               alt="Drohnenaufnahme von Kamegg"
               onError={(event) => {
-                event.currentTarget.src = '/media/kamegg-drone-placeholder.svg'
+                event.currentTarget.src = heroImageFallbackSrc
               }}
             />
           </figure>
